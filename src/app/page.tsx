@@ -285,7 +285,7 @@ if (!desconto) {
           placeholder="Nombre del producto (opcional)"
           value={nombreManual}
           onChange={(e) => setNombreManual(e.target.value)}
-          className="w-full border rounded-lg p-3 text-sm bg-white"
+          className="w-full border rounded-lg p-3 text-sm bg-white text-gray-900 placeholder-gray-500"
         />
       </div>
 
@@ -314,7 +314,7 @@ if (!desconto) {
 
       {resultado.length > 0 && (
         <div className="w-full max-w-md bg-white p-4 rounded-lg shadow mb-4">
-          <h2 className="font-semibold border-b mb-2">Confirmar resultados:</h2>
+          <h2 className="font-semibold border-b mb-2 text-gray-900">Confirmar resultados:</h2>
           <p className="text-xs text-gray-500 mb-2">Tokens descontados al analizar. Saldo actual: {tokens}</p>
           {resultado.map((item, i) => (
             <div key={i} className="py-2 border-b last:border-0">
@@ -331,7 +331,7 @@ if (!desconto) {
                 </div>
               ) : (
                 <div className="flex justify-between items-center">
-                  <span>{item.producto}</span>
+                  <span className="text-gray-900">{item.producto}</span>
                   <div className="flex items-center gap-2">
                     <span className="font-bold text-blue-600">x{item.cantidad}</span>
                     <button
@@ -369,7 +369,7 @@ if (!desconto) {
       {historial.length > 0 && (
         <div className="w-full max-w-md bg-white p-4 rounded-lg shadow">
           <div className="flex justify-between items-center border-b mb-2 pb-2">
-            <h2 className="font-semibold">Historial reciente</h2>
+            <h2 className="font-semibold text-gray-900">Historial reciente</h2>
             <button onClick={exportarExcel} className="bg-green-700 text-white px-3 py-1 rounded text-sm">
               Exportar ({seleccionados.size})
             </button>
