@@ -336,7 +336,7 @@ if (!desconto) {
                     <span className="font-bold text-blue-600">x{item.cantidad}</span>
                     <button
                       onClick={() => { setEditandoIndex(i); setNombreEditado(item.producto); }}
-                      className="text-xs bg-gray-100 px-2 py-1 rounded"
+                      className="text-xs bg-gray-200 text-gray-800 px-2 py-1 rounded"
                     >
                       editar
                     </button>
@@ -354,7 +354,7 @@ if (!desconto) {
           <button onClick={guardarEnBase} disabled={guardando} className="w-full mt-4 bg-green-600 text-white py-2 rounded-lg font-semibold">
             {guardando ? "Guardando..." : "Confirmar y Guardar"}
           </button>
-          <button onClick={() => setResultado([])} className="w-full mt-2 bg-gray-200 py-2 rounded-lg text-sm">
+          <button onClick={() => setResultado([])} className="w-full mt-2 bg-gray-200 text-gray-800 py-2 rounded-lg text-sm">
             Cancelar
           </button>
         </div>
@@ -384,7 +384,7 @@ if (!desconto) {
             <div
               key={item.id}
               onClick={() => toggleSeleccion(item.id)}
-              className={`flex justify-between items-center py-2 border-b last:border-0 text-sm cursor-pointer rounded px-2 ${seleccionados.has(item.id) ? 'bg-blue-50' : 'bg-white'}`}
+              className={`flex justify-between items-center py-2 border-b last:border-0 text-sm cursor-pointer rounded px-2 ${seleccionados.has(item.id) ? 'bg-blue-50' : 'bg-white'} text-gray-900`}
             >
               <div className="flex items-center gap-2">
                 <input
